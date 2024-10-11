@@ -1,0 +1,13 @@
+.search-button{
+    background-image: url(../icons/BTN_SEARCH/BTN_SEARCH_SELECTED.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    border: none;
+}
+.search-button:hover{
+    background-image: url(../icons/BTN_SEARCH/BTN_SEARCH_HOVER.svg);
+}
+.search-button:active{
+    background-image: url(../icons/BTN_SEARCH/BTN_SEARCH_DEFAULT.svg);
+}

@@ -1,0 +1,20 @@
+.btn-nav{
+    background-image: url(../icons/BTN_ARROW_UP/BTN_ARROW_UP_DEFAULT.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    border: none;
+    width: 3rem;
+    height: 3rem;
+    margin: 2rem;
+}
+.btn-nav:hover{
+    background-image: url(../icons/BTN_ARROW_UP/BTN_ARROW_UP_HOVER.svg);
+}
+.btn-nav:active{
+    background-image: url(../icons/BTN_ARROW_UP/BTN_ARROW_UP_SELECTED.svg);
+}
+
+.next{
+    transform: rotate(180deg);
+}

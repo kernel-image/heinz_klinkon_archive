@@ -1,0 +1,39 @@
+.search-sidebar {
+    margin-top: 4rem;
+}
+
+.search-sidebar-header{
+    background-color: rgb(233, 233, 233);
+    border: black 1px solid;
+    padding: 2rem 1rem 2rem 2rem;
+}
+
+.search-form{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+}
+
+input{
+    margin-right: 0.5rem;
+    width: 15rem;
+    height: 1.5rem;
+}
+
+.search-label{
+    margin-right: 0.75rem;
+    text-decoration-line: underline;
+}
+
+.search-button{
+    width: 5rem;
+    height: 2rem;
+    margin-right: 0.5rem;
+}
+
+.search-status{
+    margin-top: 2.5rem;
+    margin-right: 1.5em;
+    text-align: right;
+}

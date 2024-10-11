@@ -1,0 +1,7 @@
+.message {
+    white-space: pre-wrap;
+}
+.welcome {
+    margin-top: 0;
+    transform: translateY(-4rem);
+}

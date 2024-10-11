@@ -1,0 +1,42 @@
+.search-results{
+    max-height: 512px;
+    overflow: scroll;
+}
+
+.search-result{
+    display: grid;
+    grid-template-columns: repeat(4, 6rem);
+    grid-gap: 0.5rem;
+    padding: 1rem;
+    line-height: 1em;
+    width: 100%;
+}
+
+.search-result.selected{
+    font-style: italic;
+    background-color: white;
+    color:#242424;
+}
+
+.heading{
+    text-decoration-line: underline;
+    background-color: rgb(233, 233, 233);
+    text-align:center;
+    width: inherit;
+}
+
+.result{
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+.search-result.default:hover{
+    background-color:  rgb(200, 200, 200);
+    color: #242424;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.search-result:active{
+    background-color: white;
+}
