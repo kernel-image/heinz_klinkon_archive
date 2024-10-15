@@ -36,14 +36,14 @@
   }
 }
 
-@media screen and (max-width: 704px) {
+@media screen and ((max-width: 704px) or (max-height: 1024px)) {
   .content {
-    min-height: calc(100vh - 9rem);
+    width: 480px;
   }
 }
 
-@media screen and (max-width: 560px) {
+@media screen and ((max-width: 560px) or (max-height: 560px)) {
   .content {
-    min-height: calc(100vh - 8rem);
+    width: 320px;
   }
 }
