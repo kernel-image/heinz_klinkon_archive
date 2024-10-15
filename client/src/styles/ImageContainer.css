@@ -2,6 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 640px;
+    max-height: 640px;
 }
 
 img{
