@@ -37,3 +37,9 @@ input{
     margin-right: 1.5em;
     text-align: right;
 }
+
+@media screen and (max-width: 1440px) {
+    .search-sidebar{
+        position: absolute;
+    }
+}

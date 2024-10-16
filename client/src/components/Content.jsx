@@ -15,10 +15,10 @@ function Content() {
       if (!loaded) return null;
     //console.log("rendering content for id: " + id);
     return (
-        <div className="content-wrapper">        
+        <>        
             <ImageContainer id = {id}/>
             <TextContainer id = {id}/>
-        </div>
+        </>
     )
 }
 

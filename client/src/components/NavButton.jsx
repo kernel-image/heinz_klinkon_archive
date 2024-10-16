@@ -2,12 +2,11 @@ import { useContext } from 'react'
 import PropTypes from 'prop-types'
 import { AppContext } from '../utils/AppContext'
 import '../styles/NavButton.css'
-import { useNavigate } from 'react-router-dom';
+
 import { getIndex } from '../utils/navIndexMan';
 
-function NavButton({type}) {
-    const navigate = useNavigate();
-    const {results, selectedResult, setSelectedResult} = useContext(AppContext);
+function NavButton({type, navigate}) {
+    const {results, selectedResult, setSelectedResult, setContentVisible} = useContext(AppContext);
     const handleNavClick = (type) => {
         console.log(`clicked ${type} button`);
 
@@ -16,6 +15,7 @@ function NavButton({type}) {
         }
         else if (!selectedResult) {
             setSelectedResult(results[0]);
+            setContentVisible(true);
             navigate(`/id/${results[0].id}`.toLowerCase());
         }
         else {
@@ -30,6 +30,7 @@ function NavButton({type}) {
                 return;
             }
             setSelectedResult(results[futureIndex]);
+            setContentVisible(true);
             navigate(`/id/${results[futureIndex].id}`.toLowerCase());
         }
     }
@@ -40,7 +41,8 @@ function NavButton({type}) {
 }
 
 NavButton.propTypes = {
-    type: PropTypes.string.isRequired
+    type: PropTypes.string.isRequired,
+    navigate: PropTypes.func
 }
 
 export default NavButton

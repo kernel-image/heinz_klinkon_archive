@@ -1,30 +1,14 @@
-import { Link, Navigate, Outlet } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
+import Layout from './components/Layout.jsx';
 import ErrorPage from './components/ErrorPage.jsx'
-import SearchSidebar from './components/SearchSidebar.jsx';
 import Content from './components/Content.jsx';
-import NavButton from './components/NavButton.jsx';
-import Header from './components/Header.jsx';
 import Home from './components/Home.jsx';
 
 const routes = [
     {
       path: "/",
       element: (
-            <>
-            <Link to = "/" tabIndex="0">
-              <Header />
-            </Link>
-            <div className = "main">
-              <div className="content">
-                <Outlet />
-                <div className = "footer">
-                  <NavButton type = "previous"/>
-                  <NavButton type = "next"/>
-                </div>
-              </div>
-              <SearchSidebar />
-            </div>
-            </>
+            <Layout />
           ),
           children: [
             {

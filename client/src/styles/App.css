@@ -19,8 +19,8 @@
   padding-right:20rem;
   justify-content: space-between;
   min-height: calc(100vh - 12rem);
+  max-width: 640px;
 }
-
 
 .footer {
   display: flex;
@@ -43,5 +43,11 @@
 @media screen and ((max-width: 560px) or (max-height: 560px)) {
   .content {
     width: 320px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .content-wrapper.hidden {
+    visibility: hidden;
   }
 }

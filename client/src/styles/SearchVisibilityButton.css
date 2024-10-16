@@ -1,0 +1,15 @@
+.search-visibility-button{
+    background-image: url(../icons/BTN_SEARCH/BTN_SEARCH_DEFAULT.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    background-position: center;
+    border: none;
+    width: 72px;
+}
+.search-visibility-button:hover{
+    background-image: url(../icons/BTN_SEARCH/BTN_SEARCH_HOVER.svg);
+}
+.search-visibility-button:active{
+    background-image: url(../icons/BTN_SEARCH/BTN_SEARCH_SELECTED.svg);
+}

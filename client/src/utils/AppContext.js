@@ -10,4 +10,6 @@ export const AppContext = createContext({
     setSearch: () => {},
     selectedClass: false,
     setSelectedClass: () => {},
+    contentVisible: true,
+    setContentVisible: () => {}
   });

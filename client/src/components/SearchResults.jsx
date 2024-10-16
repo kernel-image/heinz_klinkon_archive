@@ -10,7 +10,6 @@ function SearchResults({navigate}) {
     if (results.length === 0) {
         return null
     }
-    //console.log(results);
     return (
         <>
         <SearchResult result = {headerElement} />
@@ -22,7 +21,7 @@ function SearchResults({navigate}) {
 }
 
 SearchResults.propTypes = {
-    navigate: PropTypes.func.isRequired
+    navigate: PropTypes.func
 }
 
 export default SearchResults

@@ -5,7 +5,7 @@ import { useContext, useEffect, useState } from 'react'
 import { AppContext } from '../utils/AppContext'
 
 function SearchResult({result, navigate}) {
-    const {selectedResult, setSelectedResult} = useContext(AppContext);
+    const {selectedResult, setSelectedResult, setContentVisible} = useContext(AppContext);
     const [selectedClass, setSelectedClass] = useState(false);
 
     useEffect(() => {
@@ -26,6 +26,7 @@ function SearchResult({result, navigate}) {
     const handleClick = (result) => {
         console.log("clicked result: " + result.id);
         setSelectedResult(result);
+        setContentVisible(true);
         navigate(`/id/${result.id}`.toLowerCase());
     }
 

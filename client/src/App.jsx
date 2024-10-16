@@ -10,15 +10,16 @@ function App() {
   const [search, setSearch] = useState('default');
   const {results, error, searching} = useResults(search);
   const [selectedResult, setSelectedResult] = useState(null);
-
+  const [contentVisible, setContentVisible] = useState(true);
+  
   useEffect(() => {
     console.log(window.location.pathname);
   }, [selectedResult]);
 
   return (
     <>
-      <AppContext.Provider value = {{results, error, searching, selectedResult, setSelectedResult, setSearch, search}}>
-        <RouterProvider router = {router} onNavigate = {() => {console.log(window.location.pathname)}}>
+      <AppContext.Provider value = {{results, error, searching, selectedResult, setSelectedResult, setSearch, search, contentVisible, setContentVisible}}>
+        <RouterProvider router = {router}>
           <Outlet />
         </RouterProvider>
       </AppContext.Provider>

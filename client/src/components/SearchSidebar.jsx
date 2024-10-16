@@ -5,12 +5,11 @@ import SearchStatus from './SearchStatus'
 import SearchResults from './SearchResults'
 import { useState, useContext } from 'react'
 import { AppContext } from '../utils/AppContext'
-import { useNavigate } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
-function SearchSidebar() {
+function SearchSidebar({navigate}) {
     const [inputValue, setInputValue] = useState("");
     const {setSearch} = useContext(AppContext);
-    const navigate = useNavigate();
 
     const handleSearch = (event) => {
         console.log("handle search called for " + inputValue);
@@ -27,9 +26,13 @@ function SearchSidebar() {
                 </form>
                 <SearchStatus />
             </div>
-            <SearchResults navigate = {navigate}/>
+            <SearchResults navigate = {navigate} />
         </div>
     )
+}
+
+SearchSidebar.propTypes = {
+    navigate: PropTypes.func,
 }
 
 export default SearchSidebar
