@@ -43,3 +43,13 @@ input{
         position: absolute;
     }
 }
+
+@media screen and ((max-width: 544px) or (max-height: 544px)){
+    .result{
+        font-size: 0.75rem;
+    }
+
+    input{
+        width: 10rem;
+    }
+}

@@ -40,3 +40,24 @@
 .search-result:active{
     background-color: white;
 }
+
+@media screen and (max-width: 1440px) {
+    .search-result{
+        grid-template-columns: repeat(4, 9rem);
+    }
+}
+
+@media screen and ((max-width: 704px) or (max-height: 1024px)) {
+    .search-result{
+        grid-template-columns: repeat(4, 6.5rem);
+    }
+}
+
+@media screen and ((max-width: 544px) or (max-height: 544px)){
+    .search-result{
+        grid-template-columns: repeat(4, 4rem);
+    }
+    .result{
+        font-size: 0.75rem;
+    }
+}
