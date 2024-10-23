@@ -1,0 +1,1 @@
+COPY works(title, year, medium, filename) FROM './data/hk_works.tsv' DELIMITER E'\t' CSV HEADER;
