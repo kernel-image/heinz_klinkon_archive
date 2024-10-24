@@ -7,12 +7,12 @@ function ErrorPage() {
   const message = error ? error.message : "unknown error";
   return (
     <>
-        <ImageContainer id = "error"/>
-        <h3>kaputt</h3>
+        <ImageContainer id = "hk0136"/>
+        <h3>es ist kaput :(</h3>
         <div className="error message">
             {message}
         </div>
-        <Link to = "/">Home</Link>
+        <Link to = "/">Go Back Home</Link>
         </>
   )
 }
