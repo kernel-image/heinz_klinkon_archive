@@ -23,7 +23,7 @@ function SearchStatus() {
     else {
         return (
             <div className="search-status" data-testid="search-status">
-                {search === "default" ? "Showing all pieces" : `Showing ${results.length} ${search} piece${results.length === 1 ? "" : "s"}`}
+                {search === `Showing ${results.length} ${search} piece${results.length === 1 ? "" : "s"}`}
             </div>
         )
     }
