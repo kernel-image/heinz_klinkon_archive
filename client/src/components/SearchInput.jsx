@@ -11,7 +11,16 @@ function SearchInput({inputValue, setInputValue, placeholder = "Search here"}) {
         name="search"
         value={inputValue}
         placeholder={placeholder}
-        onChange={(event) => setInputValue(event.target.value)}
+        onChange={(event) => {
+          const negativeRegex = /[^[\w\s,.?!-']]/;
+          if (negativeRegex.test(event.target.value)) {
+            const filteredValue = event.target.value.replace(negativeRegex, '');
+            setInputValue(filteredValue);
+            return;
+          }
+          setInputValue(event.target.value)
+          }
+        }
       />
       
       </>
