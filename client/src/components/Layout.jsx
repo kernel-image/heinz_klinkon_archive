@@ -12,12 +12,6 @@ function Layout() {
     const {contentVisible, setContentVisible} = useContext(AppContext);
     const navigate = useNavigate();
     const shouldToggleSearch = useMediaQuery('(max-width: 1440px)');
-    if (shouldToggleSearch){
-        console.log("should toggle search");
-    }
-    else{
-        console.log("should not toggle search");
-    }
 
     const handleToggleSearch = () => {
         console.log("handle toggle search called");
