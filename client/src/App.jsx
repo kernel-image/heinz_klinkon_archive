@@ -7,7 +7,7 @@ import './styles/App.css'
 
 function App() {
   const router = createBrowserRouter(routes);
-  const [search, setSearch] = useState('default');
+  const [search, setSearch] = useState('hk');
   const {results, error, searching} = useResults(search);
   const [selectedResult, setSelectedResult] = useState(null);
   const [contentVisible, setContentVisible] = useState(true);
