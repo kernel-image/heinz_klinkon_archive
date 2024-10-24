@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react'
 
 const getURLforSearch = (search, port=5173) => {
     //todo:get correct url for api
-    const baseURL = `http://localhost:${port}/src/data/`;
-    return baseURL + search + ".json";
+    const baseURL = `http://localhost:${port}/`;
+    return baseURL + "?search=" + search;
 }
 
 export function useResults (search) {
@@ -12,7 +12,7 @@ export function useResults (search) {
     const [searching, setSearching] = useState(false);
 
     //const {search} = useContext(AppContext);
-    const url = getURLforSearch(search);
+    const url = getURLforSearch(search, 3000);
 
     useEffect(() => { async function getSearchResults() {
                 if (search === "") {
