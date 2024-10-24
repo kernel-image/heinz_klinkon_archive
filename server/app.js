@@ -13,7 +13,7 @@ app.use((err, req, res, next) => {
     console.error(err);
     res.status(err.statusCode || 500).send(err.message);
 });
-const port = 4000
+const port = 3000
 app.listen(port, () => {
     console.log(`heinz db interface listening on port ${port}`)
 })
