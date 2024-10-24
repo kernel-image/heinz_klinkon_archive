@@ -5,7 +5,7 @@ import { renderHook, waitFor } from '@testing-library/react';
 
 describe('test useResults hook', () => {
     it('should return results', async () => {
-        const { result } = renderHook(() => useResults('test'));
+        const { result } = renderHook(() => useResults('hk001'));
         await waitFor (() => expect(result.current.results).toHaveLength(1));
     })
 })
