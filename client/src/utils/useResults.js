@@ -17,7 +17,6 @@ const readStream = async (stream) => {
         const chunkValue = decoder.decode(value);
         result += chunkValue;
     }
-    console.log(result);
     return result;
 }
 
