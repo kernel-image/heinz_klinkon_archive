@@ -15,7 +15,7 @@ function screenQuery (req, res, next){
 }
 
 function validateQuery (req, res, next){
-    const valid = [query('search').optional({ values: "falsey"}).trim().isAlphanumeric().withMessage('search must be alphanumeric')];
+    const valid = [query('search').optional({ values: "falsey"}).trim().matches(/^[\w\s,.?!-']+$/i)().withMessage('no special characters allowed')];
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
         return res.status(400).json({ errors: errors.array() });
