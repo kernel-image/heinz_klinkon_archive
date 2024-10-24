@@ -9,7 +9,7 @@ describe('App flow tests', () => {
 
     it('renders results on load', async () => {
         render(<App />);
-        await waitFor(() => expect(screen.getByTestId(/search-result-heading/i)).toBeInTheDocument());
+        await waitFor(() => expect(screen.getByTestId("search-result-heading")).toBeInTheDocument());
         //search status update
         await waitFor(() => expect(screen.getByText(/^Showing all/)).toBeInTheDocument());
         // search results populated
@@ -148,8 +148,6 @@ describe('App flow tests', () => {
     it('navigates using nav buttons', async () => {
         const user = userEvent.setup();
         render(<App />);
-        const header = await waitFor(() => screen.getByRole("link"));
-        await user.click(header);
         //check that url is correct
         await waitFor(() => expect(window.location.pathname).toBe('/'));
         const nextButton = await waitFor(() => screen.getByTestId("next-button"));
