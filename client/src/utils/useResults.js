@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 const getURLforSearch = (search, port=5173) => {
     //todo:get correct url for api
     const baseURL = `http://localhost:${port}/`;
-    return baseURL + "?search=" + search;
+    return baseURL + "?search=" + encodeURIComponent(search);
 }
 
 export function useResults (search) {
