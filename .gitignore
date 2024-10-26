@@ -85,6 +85,9 @@ node_modules/
 client/dist
 /out/
 
+#deploy
+client/.vercel
+
 # misc
 /.log
 /logs/
