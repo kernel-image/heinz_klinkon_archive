@@ -4,7 +4,8 @@ import { useContext } from 'react'
 import { AppContext } from '../utils/AppContext'
 
 function ImageContainer({ id }) {
-    const image = `/src/img/${id}.png`
+    const baseURL = 'http://kernel-image.net/heinz';
+    const image = `${baseURL}/img/${id}.png`
     const result = useContext(AppContext).results.filter(result => result.id.toLowerCase() === id)[0];
     const alt = result ? `image of ${result.title} (${result.year}) by heinz klinkon` : `image of artwork by heinz klinkon`;
 
