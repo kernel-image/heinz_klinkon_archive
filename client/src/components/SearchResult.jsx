@@ -1,12 +1,13 @@
 import '../styles/SearchResult.css'
 import {PropTypes} from 'prop-types'
 import SearchResultInfo from './SearchResultInfo'
-import { useContext, useEffect, useState } from 'react'
+import { useContext, useEffect, useRef, useState } from 'react'
 import { AppContext } from '../utils/AppContext'
 
 function SearchResult({result, navigate}) {
     const {selectedResult, setSelectedResult, setContentVisible} = useContext(AppContext);
     const [selectedClass, setSelectedClass] = useState(false);
+    const thisResult = useRef(null);
 
     useEffect(() => {
         if (result.id === 'ID')
@@ -17,6 +18,7 @@ function SearchResult({result, navigate}) {
         else if (selectedResult.id === result.id){
             console.log(result.id + " is selected");
             setSelectedClass(true);
+            thisResult.current.scrollIntoView({behavior: 'smooth', block: 'center'});
         }else
             setSelectedClass(false);
     }, [selectedResult, result]);
@@ -40,7 +42,7 @@ function SearchResult({result, navigate}) {
     }
 
     return (
-        <button type = "button" className = {'search-result' + (selectedClass ? ' selected' : ' default')} onClick = {function() {handleClick(result)}} onKeyDown={function(event) {if (event.key === 'Enter') {handleClick(result)}}} tabIndex="0" data-testid="search-result">
+        <button type = "button" className = {'search-result' + (selectedClass ? ' selected' : ' default')} onClick = {function() {handleClick(result)}} onKeyDown={function(event) {if (event.key === 'Enter') {handleClick(result)}}} tabIndex="0" data-testid="search-result" ref={thisResult}>
             <SearchResultInfo result = {result} />
         </button>
     )
