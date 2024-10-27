@@ -17,3 +17,5 @@ const port = 3000
 app.listen(port, () => {
     console.log(`heinz db interface listening on port ${port}`)
 })
+
+export default app
