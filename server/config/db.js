@@ -9,6 +9,7 @@ const pool = new Pool({
     user: pgconfig.user,
     password: pgconfig.password,
     database: pgconfig.database,
+    ssl: true
 });
 
 export { pool };
