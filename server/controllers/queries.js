@@ -34,7 +34,7 @@ function handleQuery (req, res, next){
     //console.log(`connected to ${pool.options.database} database on ${pool.options.host}:${pool.options.port} as ${pool.options.user}`)
     const queryCopy = {...req.query};
     const search = queryCopy.search.trim().toLowerCase(); //assuming table values are lowercase for case insensitivity
-    const table = "works";
+    const table = "heinz_works";
     pool.query(`SELECT filename AS "id", title, year, medium FROM ${table} 
     WHERE (title LIKE '%${search}%') OR (year LIKE '%${search}%') OR (medium LIKE '%${search}%') OR (filename LIKE '%${search}%')`, 
     (err, result) => {
