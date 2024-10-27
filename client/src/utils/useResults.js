@@ -1,13 +1,12 @@
 import { useState, useEffect } from 'react'
 
-const getURLforSearch = (search, port=5173) => {
-    //todo:get correct url for api
-    const baseURL = `http://localhost:${port}/`;
+const getURLforSearch = (search) => {
+    const baseURL = 'https://heinzserver.vercel.app/';
     return baseURL + "?search=" + encodeURIComponent(search);
 }
 
 const readStream = async (stream) => {
-    const reader = stream.getReader();
+    const reader = stream.getReader()
     const decoder = new TextDecoder();
     let done = false;
     let result = "";
@@ -26,7 +25,7 @@ export function useResults (search) {
     const [searching, setSearching] = useState(false);
 
     //const {search} = useContext(AppContext);
-    const url = getURLforSearch(search, 3000);
+    const url = getURLforSearch(search);
 
     useEffect(() => { async function getSearchResults() {
                 if (search === "") {
