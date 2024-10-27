@@ -1,7 +1,0 @@
-CREATE TABLE IF NOT EXISTS works (
-  id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
-  title VARCHAR ( 255 ),
-  year VARCHAR ( 5 ),
-  medium VARCHAR ( 255 ),
-  filename VARCHAR ( 6 )
-);
