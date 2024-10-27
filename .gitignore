@@ -87,6 +87,7 @@ client/dist
 
 #deploy
 client/.vercel
+server/.vercel
 
 # misc
 /.log
