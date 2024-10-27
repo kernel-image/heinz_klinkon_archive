@@ -83,7 +83,12 @@ node_modules/
 # build
 /build/
 /dist/
+client/dist
 /out/
+
+#deploy
+client/.vercel
+server/.vercel
 
 # misc
 /.log
