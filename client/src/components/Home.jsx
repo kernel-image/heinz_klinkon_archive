@@ -8,10 +8,7 @@ function Home() {
     return (
         <> 
         <ImageContainer id = {homeimg} />
-        <WelcomeMessage message = {`HEINZ KLINKON (1941-2008) was an artist, designer, and educator.\nThis website attempts to catalogue his work for interested parties to browse.\nAdditional images and information will be added on an ongoing basis.\n`}/>
-        <div className="contact">
-            <a href="mailto:info@kernel-image.net">Email</a> with inquiries.
-        </div>
+        <WelcomeMessage message = {`HEINZ KLINKON (1941-2008) was an artist, designer, and educator.  This website attempts to catalogue his work for interested parties to browse. Titles in parenthesis are provisional.  Additional images and information will be added on an ongoing basis.\n`}/>
         </>
     )
 }

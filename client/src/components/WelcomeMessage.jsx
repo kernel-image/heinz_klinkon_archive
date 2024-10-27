@@ -7,6 +7,10 @@ function WelcomeMessage({message}) {
         <>
         <p className="welcome message">
             {message}
+            <br/>
+            <div className="contact">
+            <a href="mailto:info@kernel-image.net">Email</a> with inquiries.
+        </div>
         </p>
         </>
     )
