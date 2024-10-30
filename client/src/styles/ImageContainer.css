@@ -1,0 +1,29 @@
+.image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 640px;
+    max-height: 640px;
+}
+
+img{
+    width: 640px;
+    height: 640px;
+    object-fit: contain;
+}
+
+
+
+@media screen and ((max-width: 704px) or (max-height: 1024px)) {
+    img{
+        width: 480px;
+        height: 480px;
+    }
+}
+
+@media screen and ((max-width: 544px) or (max-height: 544px)){
+    img{
+        width: 320px;
+        height: 320px;
+    }
+}

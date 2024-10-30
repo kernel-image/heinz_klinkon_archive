@@ -1,0 +1,53 @@
+#root {
+  max-width: 1440px;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 2rem 2rem 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-right:20rem;
+  justify-content: space-between;
+  max-width: 640px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 2rem;
+}
+
+@media only screen and (min-aspect-ratio: 1/1) {
+  .content {
+    transform: translateY(-4rem);
+  }
+}
+
+@media screen and ((max-width: 704px) or (max-height: 1024px)) {
+  .content {
+    width: 480px;
+  }
+}
+
+@media screen and ((max-width: 544px) or (max-height: 544px)) {
+  .content {
+    width: 320px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .content-wrapper.hidden {
+    visibility: hidden;
+  }
+}
