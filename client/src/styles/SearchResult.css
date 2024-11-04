@@ -10,6 +10,8 @@
     padding: 1rem;
     line-height: 1em;
     width: 100%;
+    background-color: #242424;
+    color: white;
 }
 
 .search-result.selected{
@@ -21,6 +23,7 @@
 .heading{
     text-decoration-line: underline;
     background-color: rgb(233, 233, 233);
+    color: #242424;
     text-align:center;
     width: inherit;
 }
