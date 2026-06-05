@@ -69,6 +69,7 @@ Thumbs.db
 #environment variables
 .env
 .env.local
+.env.production
 
 # node
 node_modules/
